@@ -68,7 +68,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'static/css/main.css': 'src/sass/main.scss',
-                    'dist/pluginName.css': 'src/sass/pluginName.scss'
+                    'dist/asos.zoom.css': 'src/sass/asos.zoom.scss'
                 }
             }
         },

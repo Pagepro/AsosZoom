@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
-    $.fn.pluginName = function (options) {
-        var settings = $.extend(true, {}, $.fn.pluginName.defaults, options);
+    $.fn.asosZoom = function (options) {
+        var settings = $.extend(true, {}, $.fn.asosZoom.defaults, options);
         this.on('click', function (e) {
             var container,
                 thumbHolder,
@@ -155,7 +155,7 @@
             }
         });
     };
-    $.fn.pluginName.defaults = {
+    $.fn.asosZoom.defaults = {
         zoom: 'horizontal',
         speed: 500,
         thumbnails: true,
