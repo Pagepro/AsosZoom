@@ -8,6 +8,7 @@
             thumbnails: true,
             closeButtonTemplate: '<a href="#" id="asosZoom__content__close">{{closeText}}</a>',
             closeText: 'x',
+            controls: true,
             arrowsTemplate: '<a href="#" id="asosZoom__content__next">{{nextText}}</a><a href="#" id="asosZoom__content__prev">{{prevText}}</a>',
             thumbnailPosition: 'vertical',
             onDisplayed: function () {},
@@ -49,7 +50,6 @@
                 that.showZoom();
                 that.enableZoomActions();
                 that.closingActions();
-                that.arrows();
                 that.updateCurrentThumb();
                 that.settings.onDisplayed.call(that);
             });
@@ -154,6 +154,9 @@
                     that.currentIndex = that.$thumbs.index($this);
                     that.$zoomedImage.attr('src', $this.attr('href'));
                 });
+                if (that.settings.controls) {
+                    that.arrows();
+                }
             }
         },
         arrows: function () {
@@ -198,8 +201,10 @@
             this.updateCurrentThumb();
         },
         updateCurrentThumb: function () {
-            this.$thumbs.removeClass('active');
-            this.$thumbs.eq(this.currentIndex).addClass('active');
+            if (this.$thumbs) {
+                this.$thumbs.removeClass('active');
+                this.$thumbs.eq(this.currentIndex).addClass('active');
+            }
         }
     };
     $.fn[pluginName] = function (options) {
