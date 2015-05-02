@@ -34,7 +34,7 @@ First and most important, the jQuery library needs to be included (no need to do
 Create a `<a class="asosZoom">` element, with href pointing to big image.
 
 ```html
-<a class="asos-zoom" href="/images/big-image.jpg"><img src="/images/thumbnail.jpg" /></a></li>
+<a class="asos-zoom" href="/images/big-image.jpg"><img src="/images/thumbnail.jpg" /></a>
 ```
 
 ###Step 3: Call the asosZoom
@@ -52,6 +52,7 @@ $(document).ready(function(){
 ###General
 
 **zoom**
+
 Type of zoom dimension
 ```
 default: 'horizontal'
@@ -59,6 +60,7 @@ options: 'horizontal', 'vertical'
 ```
 
 **speed**
+
 Zoom fadeIn effect transition duration (in ms)
 ```
 default: 500
@@ -66,6 +68,7 @@ options: integer
 ```
 
 **closeButtonTemplate**
+
 HTML template for close button
 ```
 default: '<a href="#" id="asosZoom__content__close">{{closeText}}</a>'
@@ -73,19 +76,11 @@ options: string
 ```
 
 **closeText**
+
 Text displayed on close button
 ```
 default: 'x'
 options: string
-```
-
-**thumbnailPosition**
-Position of thumbnails
-```
-default: 'vertical'
-options: 'vertical', 'horizontal'
-```
-
 ```
 
 ###Thumbnails
@@ -97,9 +92,18 @@ default: true
 options: boolean (true / false)
 ```
 
+**thumbnailPosition**
+
+Position of thumbnails
+```
+default: 'vertical'
+options: 'vertical', 'horizontal'
+```
+
 ###Controls
 
 **controls**
+
 Display left / right arrows in gallery mode
 ```
 default: true
@@ -158,5 +162,3 @@ Executes immediately after zoom popup is displayed
 default: function(){}
 options: function(){ // your code here }
 ```
-
-Long live Zep.
