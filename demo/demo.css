@@ -1,0 +1,16 @@
+img {
+    max-width: none;
+}
+.list--gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.list--gallery li {
+    float: left;
+    width: 150px;
+}
+.list--gallery li img {
+    max-width: 95%;
+}
