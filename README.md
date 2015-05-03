@@ -55,8 +55,8 @@ $(document).ready(function(){
 
 Type of zoom dimension
 ```
-default: 'horizontal'
-options: 'horizontal', 'vertical'
+default: 'vertical'
+options: 'vertical', 'horizontal'
 ```
 
 **speed**

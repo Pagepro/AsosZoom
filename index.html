@@ -12,44 +12,48 @@
         <main class="sec--content">
             <div class="inner">
                 <h1>AsosZoom Demo</h1>
-                <h2>Single Image Demo</h2>
+                <h2>Single Image Vertical Mode</h2>
                 <p>
-                    <a href="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image2xxl.jpg" class="asos-zoom">
-                        Click me
+                    <a href="demo/pic-04.jpg" class="asos-zoom">
+                        <img src="demo/thumb-04.jpg" alt="Asos Zoom Vertical Image Demo" />
+                    </a>
+                </p>
+
+                <h2>Single Image Horizontal Mode</h2>
+                <p>
+                    <a href="demo/pic-05.jpg" class="asos-zoom-horizontal">
+                        <img src="demo/thumb-05.jpg" alt="Asos Zoom Horizontal Image Demo" />
                     </a>
                 </p>
                 <h2>Gallery demo</h2>
                 <ul class="list--gallery">
                     <li>
-                        <a href="http://images.asos-media.com/inv/media/1/5/8/2/4542851/brightpink/image1xxl.jpg" rel="gallery-1">
-                            <img src="http://images.asos-media.com/inv/media/1/5/8/2/4542851/brightpink/image1s.jpg" alt="" />
+                        <a href="demo/pic-01.jpg" rel="gallery-1">
+                            <img src="demo/thumb-01.jpg" alt="Asos Zoom Demo Image 01" />
                         </a>
                     </li>
                     <li>
-                        <a href="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image2xxl.jpg" rel="gallery-1">
-                            <img src="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image2s.jpg" alt="" />
+                        <a href="demo/pic-02.jpg" rel="gallery-1">
+                            <img src="demo/thumb-02.jpg" alt="Asos Zoom Demo Image 02" />
                         </a>
                     </li>
                     <li>
-                        <a href="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image3xxl.jpg" rel="gallery-1">
-                            <img src="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image3s.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image4xxl.jpg" rel="gallery-1">
-                            <img src="http://images.asos-media.com/inv/media/1/5/8/2/4542851/image4s.jpg" alt="">
+                        <a href="demo/pic-03.jpg" rel="gallery-1">
+                            <img src="demo/thumb-03.jpg" alt="Asos Zoom Demo Image 03" />
                         </a>
                     </li>
                 </ul>
             </div>
+            <p>Images: http://pixabay.com/</p>
         </main>
-        <script src="static/js/vendor/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="dist/asos.zoom.js"></script>
         <script>
             $('.asos-zoom').asosZoom();
-            $('.list--gallery a').asosZoom({
-                zoom: 'vertical'
+            $('.asos-zoom-horizontal').asosZoom({
+                zoom: 'horizontal'
             });
+            $('.list--gallery a').asosZoom();
         </script>
     </body>
 </html>
